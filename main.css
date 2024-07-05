@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffffb9;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 500px;
+  height: auto;
+  border: 2px solid #ffffff30;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 15px 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: #ffffff1a;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pfp {
+  /* border: 2px solid #ffffff30; */
+  /* border-radius: 50%; */
+  /* padding-bottom: 30px; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#circle1 {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  top: 3%;
+  left: 25%;
+  filter: drop-shadow(1px 1px 20px red);
+  animation: circleanimate1 8s infinite;
+}
+
+@keyframes circleanimate1 {
+  50% {
+    top: 2%;
+    left: 27%;
+  }
+}
+
+#circle2 {
+  position: absolute;
+  border-radius: 50%;
+  width: 300px;
+  bottom: 5%;
+  right: 25%;
+  animation: circleanimate2 5s infinite;
+  filter: drop-shadow(1px 1px 20px blue);
+}
+
+@keyframes circleanimate2 {
+  50% {
+    bottom: 6%;
+    right: 26%;
+  }
+}
+
+.card-heading {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+.card-sub-heading {
+  color: #ffffff85;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+.button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 40px;
+}
+
+#share-button {
+  border: 2px solid #ffffffb9;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 150px;
+  background: #ffffff00;
+  color: #ffffff85;
+  padding: 10px 10px;
+  transition: all 400ms;
+}
+
+#share-button:hover {
+  background-color: #ffffff9a;
+}
+
+#follow-button {
+  border: 2px solid #ffffffb9;
+  border-radius: 5px;
+  width: 150px;
+  background: #ffffff00;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 400ms;
+}
+
+#follow-button:hover {
+  background-color: #ffffff9a;
+}
+
+
+.modal{
+    position: fixed;
+    border: 2px solid #ffffff30;
+    border-radius: 10px;
+    padding: 20px 15px;
+    width:600px;
+    height: 280px;
+    background-color: #ffffff00;
+    box-shadow: 15px 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  scale: 0;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.active{
+  scale: 1;
+}
+
+/* .close{
+  scale: 0;
+} */
+
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#close{
+    color: white;
+    /* height: px; */
+    cursor: pointer;
+}
+
+.icon-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-heading{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+}
+
+.modal-subheading{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.brand-icons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 3s0px;
+}
+
+#facebook{
+    border: 1px solid #1771E6;
+    border-radius: 80%;
+    font-size: 27px;
+    padding: 17px 25px;
+    margin: 10px 0px 25px;
+    transition: all 200ms;
+}
+
+#facebook:hover{
+    background-color:#1771E6;
+    color: white;
+}
+
+
+#twitter{
+    border: 1px solid #1c99e6;
+    border-radius: 80%;
+    font-size: 27px;
+    padding: 17px 25px;
+    margin: 10px 0px 25px;
+    transition: all 200ms;
+}
+
+#twitter:hover{
+    background-color:#1c99e6;
+    color: white;
+}
+
+#instagram{
+    border: 1px solid #cb2770;
+    border-radius: 80%;
+    font-size: 27px;
+    padding: 17px 25px;
+    margin: 10px 0px 25px;
+    transition: all 200ms;
+}
+
+#instagram:hover{
+    background-color:#cb2770;
+    color: white;
+}
+
+#whatsapp{
+    border: 1px solid #2fe664;
+    border-radius: 80%;
+    font-size: 27px;
+    padding: 17px 25px;
+    margin: 10px 0px 25px;
+    transition: all 200ms;
+}
+
+#whatsapp:hover{
+    background-color:#2fe664;
+    color: white;
+}
+
+#telegram{
+    border: 1px solid #0081c2;
+    border-radius: 80%;
+    font-size: 27px;
+    padding: 17px 25px;
+    margin: 10px 0px 25px;
+    transition: all 200ms;
+}
+
+#telegram:hover{
+    background-color:#0081c2;
+    color: white;
+}
+
+/* #overlay { */
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: burlywood; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlayActive{
+  opacity: 1;
+  pointer-events:initial;
+}
